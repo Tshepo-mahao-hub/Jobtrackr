@@ -1,0 +1,3 @@
+@model JobTrackr.Models.JobApplication
+@{ ViewData["Title"] = "Edit application"; }
+<div class="page-heading"><a asp-action="Details" asp-route-id="@Model.Id" class="text-decoration-none small">← Back to details</a><h1 class="fw-bold mt-2">Edit application</h1></div><form asp-action="Edit" class="form-card"><input type="hidden" asp-for="Id" /><partial name="_ApplicationForm" model="Model" /><div class="mt-4"><button class="btn btn-primary px-4">Save changes</button><a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link text-muted">Cancel</a></div></form>
