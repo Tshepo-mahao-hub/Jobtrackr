@@ -1,3 +1,76 @@
-@{ ViewData["Title"] = "Your job search, organized"; }
-<section class="hero rounded-4 p-5 mb-5 text-white overflow-hidden"><div class="row align-items-center"><div class="col-lg-7"><p class="eyebrow">THE JOB SEARCH COMPANION</p><h1 class="display-4 fw-bold">Turn every application into momentum.</h1><p class="lead my-4">Keep opportunities, interviews and documents in one calm, focused workspace.</p>@if (User.Identity?.IsAuthenticated == true) { <a class="btn btn-light btn-lg px-4" asp-controller="Applications" asp-action="Index">Open my tracker</a> } else { <a class="btn btn-light btn-lg px-4" asp-area="Identity" asp-page="/Account/Register">Start tracking free</a> }</div><div class="col-lg-5 d-none d-lg-block"><div class="hero-card shadow"><span class="text-muted small">NEXT INTERVIEW</span><h4 class="mt-2">Software Engineer Intern</h4><p class="mb-0">Thursday · 10:00 · Video call</p></div></div></div></section>
-<div class="row g-4"><div class="col-md-4"><div class="feature-card"><div class="feature-number">01</div><h4>Own the process</h4><p>Track every role from wish list to offer, with no lost follow-ups.</p></div></div><div class="col-md-4"><div class="feature-card"><div class="feature-number">02</div><h4>Prepare with context</h4><p>Keep recruiter details, notes and tailored documents exactly where you need them.</p></div></div><div class="col-md-4"><div class="feature-card"><div class="feature-number">03</div><h4>See your progress</h4><p>Use simple analytics to understand your job-search pipeline.</p></div></div></div>
+@{
+    ViewData["Title"] = "Your job search, organized";
+}
+
+<section class="hero rounded-4 p-5 mb-5 text-white overflow-hidden">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <p class="eyebrow">THE JOB SEARCH COMPANION</p>
+            <h1 class="display-4 fw-bold">Your job search, organized.</h1>
+            <p class="lead">
+                Keep every role, every contact, and every next step in one place so you can focus on what matters.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="#" class="btn btn-primary btn-lg">Start tracking</a>
+                <a href="#features" class="btn btn-outline-light btn-lg">See how it works</a>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted small">Pipeline overview</span>
+                        <span class="badge bg-success">12 active</span>
+                    </div>
+
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                            <span>Senior Product Designer</span>
+                            <span class="text-success">Interview</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                            <span>Frontend Engineer</span>
+                            <span class="text-warning">Applied</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                            <span>Product Manager</span>
+                            <span class="text-primary">Follow-up</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center py-2">
+                            <span>UX Researcher</span>
+                            <span class="text-muted">Wishlist</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="row g-4" id="features">
+    <div class="col-md-4">
+        <div class="feature-card">
+            <div class="feature-number">01</div>
+            <h4>Own the process</h4>
+            <p>Track every role from wish list to offer, with no lost follow-ups.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="feature-card">
+            <div class="feature-number">02</div>
+            <h4>Stay in motion</h4>
+            <p>Know exactly what to do next and keep your search moving forward.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="feature-card">
+            <div class="feature-number">03</div>
+            <h4>Make better decisions</h4>
+            <p>Prioritize the right roles with a full picture of your pipeline and progress.</p>
+        </div>
+    </div>
+</div>
